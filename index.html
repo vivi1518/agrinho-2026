@@ -3,12 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte - Futuro Sustentável</title>
+    <title>Agro Forte - Futuro Sustentável | Equilíbrio Perfeito</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div class="loader">
+        <div class="loader-content">
+            <i class="fas fa-seedling loader-icon"></i>
+            <h2>Carregando AgroForte...</h2>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
     <!-- Header -->
     <header class="header">
         <nav class="navbar">
@@ -18,12 +33,16 @@
                     <span>AgroForte</span>
                 </div>
                 <ul class="nav-menu">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#solucoes">Soluções</a></li>
-                    <li><a href="#impacto">Impacto</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#solucoes" class="nav-link">Soluções</a></li>
+                    <li><a href="#impacto" class="nav-link">Impacto</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
+                <div class="header-actions">
+                    <a href="#contato" class="btn btn-sm btn-outline">Consultoria Grátis</a>
+                </div>
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -35,72 +54,98 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-particles">
+            <canvas id="particles"></canvas>
+        </div>
         <div class="hero-container">
-            <div class="hero-content">
+            <div class="hero-content animate__animated animate__fadeInLeft">
+                <div class="hero-badge">🏆 Líder em Agro Sustentável 2024</div>
                 <h1 class="hero-title">
                     <span class="gradient-text">Agro Forte</span><br>
-                    Futuro Sustentável
+                    <span class="hero-subtitle-main">Futuro Sustentável</span>
                 </h1>
-                <p class="hero-subtitle">
-                    Equilíbrio perfeito entre produção agrícola de alta performance e preservação ambiental.
+                <p class="hero-description">
+                    Equilíbrio perfeito entre <strong>produção agrícola de alta performance</strong> e <strong>preservação ambiental completa</strong>.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#solucoes" class="btn btn-primary">Nossas Soluções</a>
-                    <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
+                    <a href="#solucoes" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket"></i> Nossas Soluções
+                    </a>
+                    <a href="#contato" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone"></i> Fale Conosco
+                    </a>
                 </div>
             </div>
-            <div class="hero-stats">
+            <div class="hero-stats animate__animated animate__fadeInRight">
                 <div class="stat-item">
-                    <div class="stat-number" data-target="95">95%</div>
-                    <div class="stat-label">Redução de Emissões</div>
+                    <div class="stat-number" data-target="95">0</div>
+                    <span>%</span>
+                    <div class="stat-label">Redução CO₂</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-target="30">30%</div>
-                    <div class="stat-label">Aumento de Produção</div>
+                    <div class="stat-number" data-target="35">0</div>
+                    <span>%</span>
+                    <div class="stat-label">↑ Produção</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number" data-target="100">100%</div>
-                    <div class="stat-label">Áreas Preservadas</div>
+                    <div class="stat-number" data-target="100">0</div>
+                    <span>%</span>
+                    <div class="stat-label">Áreas Protegidas</div>
                 </div>
             </div>
         </div>
-        <div class="hero-particles">
-            <canvas id="particles"></canvas>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- Sobre Section -->
     <section id="sobre" class="sobre">
         <div class="container">
-            <div class="section-header">
-                <h2>Nossa Missão</h2>
-                <p>Produzir mais, preservando sempre</p>
+            <div class="section-header animate__animated animate__fadeInUp">
+                <h2><span class="gradient-text">Nossa Missão</span></h2>
+                <p>Produzir mais, preservando sempre. Tecnologia + Natureza = <strong>AgroForte</strong></p>
             </div>
             <div class="sobre-content">
-                <div class="sobre-text">
-                    <h3>Agro Forte: Inovação Sustentável</h3>
-                    <p>Somos pioneiros na agricultura regenerativa, combinando tecnologia de ponta com práticas que restauram o solo e protegem a biodiversidade.</p>
+                <div class="sobre-text animate__animated animate__fadeInLeft">
+                    <h3>🌱 Revolucionando o Agro Brasileiro</h3>
+                    <p>Somos pioneiros na <strong>agricultura regenerativa</strong>, combinando <strong>IA avançada</strong>, <strong>biotecnologia</strong> e práticas que restauram o solo, protegem a biodiversidade e garantem prosperidade eterna.</p>
                     <div class="features-grid">
                         <div class="feature">
-                            <i class="fas fa-seedling"></i>
-                            <h4>Solo Saudável</h4>
-                            <p>Recuperação natural do solo</p>
+                            <div class="feature-icon">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <h4>Solo Regenerado</h4>
+                            <p>+45% matéria orgânica em 2 anos</p>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-tint"></i>
-                            <h4>Água Preservada</h4>
-                            <p>Sistemas de irrigação eficiente</p>
+                            <div class="feature-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h4>Água Inteligente</h4>
+                            <p>70% menos consumo com IA</p>
                         </div>
                         <div class="feature">
-                            <i class="fas fa-solar-panel"></i>
-                            <h4>Energia Limpa</h4>
-                            <p>Fazendas solares integradas</p>
+                            <div class="feature-icon">
+                                <i class="fas fa-solar-panel"></i>
+                            </div>
+                            <h4>Energia 100% Verde</h4>
+                            <p>Fazendas solares autônomas</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h4>IA Agrícola</h4>
+                            <p>Previsões com 98% acerto</p>
                         </div>
                     </div>
                 </div>
-                <div class="sobre-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-tractor"></i>
+                <div class="sobre-visual animate__animated animate__fadeInRight">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <div class="video-title">Assista nossa história</div>
                     </div>
                 </div>
             </div>
@@ -111,143 +156,15 @@
     <section id="solucoes" class="solucoes">
         <div class="container">
             <div class="section-header">
-                <h2>Soluções Integradas</h2>
-                <p>Tecnologias que transformam o agro</p>
+                <h2><span class="gradient-text">Soluções Disruptivas</span></h2>
+                <p>Tecnologias patenteadas que transformam o agro brasileiro</p>
             </div>
             <div class="solucoes-grid">
-                <div class="solution-card">
-                    <div class="card-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AgroTech IA</h3>
-                    <p>Inteligência artificial para otimização de plantio, previsão climática e manejo preditivo.</p>
-                    <ul>
-                        <li>95% precisão nas previsões</li>
-                        <li>Redução de 40% no uso de insumos</li>
-                    </ul>
-                </div>
-                <div class="solution-card">
-                    <div class="card-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Biofertilizantes</h3>
-                    <p>Nutrientes orgânicos que regeneram o solo e aumentam a produtividade naturalmente.</p>
-                    <ul>
-                        <li>30% mais produtividade</li>
-                        <li>Zero resíduos químicos</li>
-                    </ul>
-                </div>
-                <div class="solution-card">
-                    <div class="card-icon">
-                        <i class="fas fa-droplet"></i>
-                    </div>
-                    <h3>AguaZero</h3>
-                    <p>Sistema de captação e reuso que economiza 70% do consumo de água.</p>
-                    <ul>
-                        <li>Reuso de 80% da água</li>
-                        <li>Monitoramento em tempo real</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impacto Section -->
-    <section id="impacto" class="impacto">
-        <div class="container">
-            <div class="section-header">
-                <h2>Nosso Impacto</h2>
-                <p>Resultados reais, futuro garantido</p>
-            </div>
-            <div class="impacto-charts">
-                <canvas id="impactChart"></canvas>
-            </div>
-            <div class="impacto-numbers">
-                <div class="number-item">
-                    <div class="number" data-target="50000">50.000</div>
-                    <div>Hectares Restaurados</div>
-                </div>
-                <div class="number-item">
-                    <div class="number" data-target="1200">1.200</div>
-                    <div>Fazendas Parceiras</div>
-                </div>
-                <div class="number-item">
-                    <div class="number" data-target="450">450</div>
-                    <div>mil toneladas CO2 evitado</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contato Section -->
-    <section id="contato" class="contato">
-        <div class="container">
-            <div class="section-header">
-                <h2>Entre em Contato</h2>
-                <p>Transforme sua produção hoje</p>
-            </div>
-            <div class="contato-content">
-                <div class="contato-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Endereço</h4>
-                            <p>Rua das Plantas, 123<br>São Paulo, SP</p>
+                <div class="solution-card animate__animated" data-aos="fade-up">
+                    <div class="card-header">
+                        <div class="card-icon primary">
+                            <i class="fas fa-robot"></i>
                         </div>
+                        <h3>🤖 AgroTech IA Pro</h3>
                     </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Telefone</h4>
-                            <p>(11) 9999-1234</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>contato@agroforte.com</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contato-form" id="contactForm">
-                    <input type="text" placeholder="Seu Nome" required>
-                    <input type="email" placeholder="Seu Email" required>
-                    <input type="text" placeholder="Assunto">
-                    <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <i class="fas fa-leaf"></i>
-                    <span>AgroForte</span>
-                </div>
-                <div class="footer-links">
-                    <a href="#home">Início</a>
-                    <a href="#sobre">Sobre</a>
-                    <a href="#solucoes">Soluções</a>
-                    <a href="#contato">Contato</a>
-                </div>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 AgroForte. Todos os direitos reservados.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="main.js"></script>
-</body>
-</html>
+                    <p><strong>Inteligência Artificial Completa:</strong> Otimização total de plantio, drones autônomos e previsão climática com 98% de precis
