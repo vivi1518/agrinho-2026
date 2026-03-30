@@ -3,57 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroForte & Sustentável</title>
+    <title>AgroForte - Produtividade Sustentável</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">AGRO<span>Sustentável</span></div>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#tecnologia">Tecnologia</a></li>
-                <li><a href="#equilibrio">Equilíbrio</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="hero" id="home">
-            <h1>Produzir com Inteligência, <br>Preservar por Princípio.</h1>
-            <p>O equilíbrio perfeito entre a força do agronegócio e a regeneração do meio ambiente.</p>
-            <a href="#equilibrio" class="btn">Saiba Mais</a>
+    <nav>
+        <div class="logo">AGRO<span>FORTE</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#impacto">Impacto</a></li>
+            <li><a href="#tecnologia">Tecnologias</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>O Futuro do Campo é <span class="highlight">Verde</span></h1>
+            <p>Unindo a potência da produção brasileira com as práticas mais avançadas de regeneração ambiental.</p>
+            <div class="cta-group">
+                <a href="#impacto" class="btn-primary">Ver Indicadores</a>
+                <a href="#contato" class="btn-secondary">Falar com Especialista</a>
+            </div>
         </div>
     </header>
 
-    <section id="tecnologia" class="features">
-        <h2>Inovação no Campo</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Agricultura de Precisão</h3>
-                <p>Otimização de recursos através de dados e satélites, reduzindo o impacto ambiental.</p>
-            </div>
-            <div class="card">
-                <h3>Bioinsumos</h3>
-                <p>Soluções naturais para proteger a lavoura, mantendo a saúde do solo intacta.</p>
-            </div>
-            <div class="card">
-                <h3>Energia Limpa</h3>
-                <p>Fazendas movidas a biogás e energia solar: o ciclo completo da sustentabilidade.</p>
+    <section id="impacto" class="stats">
+        <div class="container">
+            <h2>O Poder do Agro Sustentável</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>35%</h3>
+                    <p>Redução média na emissão de carbono com o sistema ILPF.</p>
+                </div>
+                <div class="stat-item">
+                    <h3>20%</h3>
+                    <p>Mais produtividade por hectare usando agricultura de precisão.</p>
+                </div>
+                <div class="stat-item">
+                    <h3>80%</h3>
+                    <p>De preservação da vegetação nativa em áreas de reserva legal no bioma Amazônico.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="equilibrio" class="content-block">
-        <div class="text">
-            <h2>O Futuro é Integrado</h2>
-            <p>Não existe produção sem natureza. A implementação de sistemas como a Integração Lavoura-Pecuária-Floresta (ILPF) prova que é possível dobrar a produtividade enquanto recuperamos áreas degradadas e sequestramos carbono.</p>
-            <strong>Agro forte é agro consciente.</strong>
+    <section id="tecnologia" class="features">
+        <div class="container">
+            <h2>Pilares da Nova Revolução</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">🌱</div>
+                    <h3>Biofábricas</h3>
+                    <p>Produção de microrganismos na fazenda para substituir fertilizantes químicos, restaurando a biologia do solo.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🛰️</div>
+                    <h3>Monitoramento Real-time</h3>
+                    <p>Drones e sensores que detectam pragas precocemente, evitando o uso desnecessário de defensivos em áreas sadias.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💧</div>
+                    <h3>Water Footprint</h3>
+                    <p>Gestão hídrica circular: reuso de água e sistemas de gotejamento subterrâneo que economizam até 40% de água.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-split">
+        <div class="info-image"></div>
+        <div class="info-text">
+            <h2>Sustentabilidade é Rentabilidade</h2>
+            <p>O mercado global hoje paga prêmio por produtos rastreáveis. O equilíbrio ambiental não é apenas um dever ético, é a maior vantagem competitiva do Brasil.</p>
+            <ul class="check-list">
+                <li>Acesso a linhas de crédito verde (juros menores).</li>
+                <li>Redução de custos com desperdício de insumos.</li>
+                <li>Valorização da terra a longo prazo.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Transforme sua Produção</h2>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu E-mail" required>
+                <textarea placeholder="Como podemos ajudar seu negócio?"></textarea>
+                <button type="submit" class="btn-primary">Enviar Mensagem</button>
+            </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Agro Sustentável - Liderando a revolução verde.</p>
+        <p>&copy; 2026 AgroForte Sustentável - Tecnologia a serviço da vida.</p>
     </footer>
 
 </body>
