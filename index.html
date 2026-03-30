@@ -1,107 +1,253 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroForte - Produtividade Sustentável</title>
+    <title>Agro Forte - Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <nav>
-        <div class="logo">AGRO<span>FORTE</span></div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#impacto">Impacto</a></li>
-            <li><a href="#tecnologia">Tecnologias</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero" id="home">
-        <div class="hero-content">
-            <h1>O Futuro do Campo é <span class="highlight">Verde</span></h1>
-            <p>Unindo a potência da produção brasileira com as práticas mais avançadas de regeneração ambiental.</p>
-            <div class="cta-group">
-                <a href="#impacto" class="btn-primary">Ver Indicadores</a>
-                <a href="#contato" class="btn-secondary">Falar com Especialista</a>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>AgroForte</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#impacto">Impacto</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-        </div>
+        </nav>
     </header>
 
-    <section id="impacto" class="stats">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Agro Forte</span><br>
+                    Futuro Sustentável
+                </h1>
+                <p class="hero-subtitle">
+                    Equilíbrio perfeito entre produção agrícola de alta performance e preservação ambiental.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#solucoes" class="btn btn-primary">Nossas Soluções</a>
+                    <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="95">95%</div>
+                    <div class="stat-label">Redução de Emissões</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="30">30%</div>
+                    <div class="stat-label">Aumento de Produção</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">100%</div>
+                    <div class="stat-label">Áreas Preservadas</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-particles">
+            <canvas id="particles"></canvas>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre">
         <div class="container">
-            <h2>O Poder do Agro Sustentável</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>35%</h3>
-                    <p>Redução média na emissão de carbono com o sistema ILPF.</p>
+            <div class="section-header">
+                <h2>Nossa Missão</h2>
+                <p>Produzir mais, preservando sempre</p>
+            </div>
+            <div class="sobre-content">
+                <div class="sobre-text">
+                    <h3>Agro Forte: Inovação Sustentável</h3>
+                    <p>Somos pioneiros na agricultura regenerativa, combinando tecnologia de ponta com práticas que restauram o solo e protegem a biodiversidade.</p>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="fas fa-seedling"></i>
+                            <h4>Solo Saudável</h4>
+                            <p>Recuperação natural do solo</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tint"></i>
+                            <h4>Água Preservada</h4>
+                            <p>Sistemas de irrigação eficiente</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-solar-panel"></i>
+                            <h4>Energia Limpa</h4>
+                            <p>Fazendas solares integradas</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3>20%</h3>
-                    <p>Mais produtividade por hectare usando agricultura de precisão.</p>
-                </div>
-                <div class="stat-item">
-                    <h3>80%</h3>
-                    <p>De preservação da vegetação nativa em áreas de reserva legal no bioma Amazônico.</p>
+                <div class="sobre-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-tractor"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="tecnologia" class="features">
+    <!-- Soluções Section -->
+    <section id="solucoes" class="solucoes">
         <div class="container">
-            <h2>Pilares da Nova Revolução</h2>
-            <div class="grid">
-                <div class="card">
-                    <div class="icon">🌱</div>
-                    <h3>Biofábricas</h3>
-                    <p>Produção de microrganismos na fazenda para substituir fertilizantes químicos, restaurando a biologia do solo.</p>
+            <div class="section-header">
+                <h2>Soluções Integradas</h2>
+                <p>Tecnologias que transformam o agro</p>
+            </div>
+            <div class="solucoes-grid">
+                <div class="solution-card">
+                    <div class="card-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AgroTech IA</h3>
+                    <p>Inteligência artificial para otimização de plantio, previsão climática e manejo preditivo.</p>
+                    <ul>
+                        <li>95% precisão nas previsões</li>
+                        <li>Redução de 40% no uso de insumos</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="icon">🛰️</div>
-                    <h3>Monitoramento Real-time</h3>
-                    <p>Drones e sensores que detectam pragas precocemente, evitando o uso desnecessário de defensivos em áreas sadias.</p>
+                <div class="solution-card">
+                    <div class="card-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Biofertilizantes</h3>
+                    <p>Nutrientes orgânicos que regeneram o solo e aumentam a produtividade naturalmente.</p>
+                    <ul>
+                        <li>30% mais produtividade</li>
+                        <li>Zero resíduos químicos</li>
+                    </ul>
                 </div>
-                <div class="card">
-                    <div class="icon">💧</div>
-                    <h3>Water Footprint</h3>
-                    <p>Gestão hídrica circular: reuso de água e sistemas de gotejamento subterrâneo que economizam até 40% de água.</p>
+                <div class="solution-card">
+                    <div class="card-icon">
+                        <i class="fas fa-droplet"></i>
+                    </div>
+                    <h3>AguaZero</h3>
+                    <p>Sistema de captação e reuso que economiza 70% do consumo de água.</p>
+                    <ul>
+                        <li>Reuso de 80% da água</li>
+                        <li>Monitoramento em tempo real</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="info-split">
-        <div class="info-image"></div>
-        <div class="info-text">
-            <h2>Sustentabilidade é Rentabilidade</h2>
-            <p>O mercado global hoje paga prêmio por produtos rastreáveis. O equilíbrio ambiental não é apenas um dever ético, é a maior vantagem competitiva do Brasil.</p>
-            <ul class="check-list">
-                <li>Acesso a linhas de crédito verde (juros menores).</li>
-                <li>Redução de custos com desperdício de insumos.</li>
-                <li>Valorização da terra a longo prazo.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="contato" class="contact">
+    <!-- Impacto Section -->
+    <section id="impacto" class="impacto">
         <div class="container">
-            <h2>Transforme sua Produção</h2>
-            <form>
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Seu E-mail" required>
-                <textarea placeholder="Como podemos ajudar seu negócio?"></textarea>
-                <button type="submit" class="btn-primary">Enviar Mensagem</button>
-            </form>
+            <div class="section-header">
+                <h2>Nosso Impacto</h2>
+                <p>Resultados reais, futuro garantido</p>
+            </div>
+            <div class="impacto-charts">
+                <canvas id="impactChart"></canvas>
+            </div>
+            <div class="impacto-numbers">
+                <div class="number-item">
+                    <div class="number" data-target="50000">50.000</div>
+                    <div>Hectares Restaurados</div>
+                </div>
+                <div class="number-item">
+                    <div class="number" data-target="1200">1.200</div>
+                    <div>Fazendas Parceiras</div>
+                </div>
+                <div class="number-item">
+                    <div class="number" data-target="450">450</div>
+                    <div>mil toneladas CO2 evitado</div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 AgroForte Sustentável - Tecnologia a serviço da vida.</p>
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p>Transforme sua produção hoje</p>
+            </div>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Rua das Plantas, 123<br>São Paulo, SP</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(11) 9999-1234</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contato@agroforte.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contato-form" id="contactForm">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <input type="text" placeholder="Assunto">
+                    <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-leaf"></i>
+                    <span>AgroForte</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Início</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#solucoes">Soluções</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroForte. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
