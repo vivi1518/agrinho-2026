@@ -1,10 +1,10 @@
-// Função para alternar entre modo escuro e claro
+// Alternar entre modo escuro e claro
 const darkModeToggle = document.getElementById('dark-mode-toggle');
 
 // Armazenar o estado do modo escuro
 let isDarkMode = false;
 
-// Função para alternar o modo escuro
+// Alterna o modo escuro
 darkModeToggle.addEventListener('click', () => {
     isDarkMode = !isDarkMode;
 
@@ -17,14 +17,14 @@ darkModeToggle.addEventListener('click', () => {
     }
 });
 
+// Personalizar saudação
+const personalizeGreetingBtn = document.getElementById('personalizeGreetingBtn');
+
 // Função para personalizar a saudação com o nome do usuário
-function personalizeGreeting() {
+personalizeGreetingBtn.addEventListener('click', () => {
     const userName = prompt("Qual é o seu nome?");
     const greetingElement = document.getElementById('personalized-greeting');
     if (userName) {
-        greetingElement.textContent = `Olá, ${userName}! Bem-vindo ao Agro Forte, Futuro Sustentável.`;
+        alert(`Olá, ${userName}! Bem-vindo ao Agro Forte, Futuro Sustentável.`);
     }
-}
-
-// Chama a função para personalizar a saudação
-personalizeGreeting();
+});
