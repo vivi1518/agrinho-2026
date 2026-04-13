@@ -23,7 +23,6 @@ const personalizeGreetingBtn = document.getElementById('personalizeGreetingBtn')
 // Função para personalizar a saudação com o nome do usuário
 personalizeGreetingBtn.addEventListener('click', () => {
     const userName = prompt("Qual é o seu nome?");
-    const greetingElement = document.getElementById('personalized-greeting');
     if (userName) {
         alert(`Olá, ${userName}! Bem-vindo ao Agro Forte, Futuro Sustentável.`);
     }
