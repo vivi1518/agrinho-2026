@@ -173,3 +173,26 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('🌱 AgroForte carregado com sucesso! 🚜');
 });
+/* Adicione esta variável no :root existente */
+:root {
+    --primary-green: #2d5a2d;
+    --secondary-green: #4a9a4a;
+    --accent-gold: #d4a017;
+    --text-dark: #1a3c1a;
+    --text-light: #f8f9fa;
+    --bg-light: #f8fff8;
+    --bg-dark: #1a2d1a;
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-size: 16px; /* Nova variável */
+}
+
+/* Canvas do gráfico */
+#impactChart {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    display: block;
+    margin: 0 auto;
+}
