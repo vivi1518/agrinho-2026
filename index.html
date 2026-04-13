@@ -1,132 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroForte - Futuro Sustentável</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Agrinho 2026 - Sustentabilidade e Tecnologia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header com navegação -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="img/logo.png" alt="Logo AgroForte" class="logo-img">
-                <h1>AgroForte</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Início</a></li>
-                <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                <li><a href="#solucoes" class="nav-link">Soluções</a></li>
-                <li><a href="#impacto" class="nav-link">Impacto</a></li>
-            </ul>
-            <button id="darkModeBtn" class="dark-mode-btn" title="Alternar modo escuro">
-                🌙
-            </button>
-        </nav>
+
+    <header class="navbar">
+        <div class="container">
+            <h1 class="logo">Agrinho <span>2026</span></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#projeto">O Projeto</a></li>
+                    <li><a href="#solucao">Solução</a></li>
+                    <li><a href="#contato" class="btn-cta">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- Seção Hero -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h2 class="hero-title">Produção Forte, Planeta Vivo</h2>
-            <p class="hero-subtitle">Equilíbrio perfeito entre agricultura moderna e preservação ambiental</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number" data-target="30">0</span>%
-                    <span class="stat-label">Redução CO₂</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="50">0</span>%
-                    <span class="stat-label">Aumento Produção</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number" data-target="95">0</span>%
-                    <span class="stat-label">Solo Preservado</span>
-                </div>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container">
+                <h2>Tecnologia no Campo para um Futuro Sustentável</h2>
+                <p>Explorando como a inovação pode transformar a agricultura e preservar o meio ambiente.</p>
+                <a href="#projeto" class="btn-primary">Saiba Mais</a>
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="img/planta.png" alt="Planta crescendo com equilíbrio">
-        </div>
-    </section>
+        </section>
 
-    <!-- Seção Sobre -->
-    <section id="sobre" class="sobre">
-        <div class="container">
-            <h2>O Equilíbrio que o Agro Precisa</h2>
-            <div class="sobre-grid">
-                <div class="sobre-text">
-                    <p>O AgroForte une tecnologia de ponta com práticas sustentáveis, criando um modelo onde a produção agrícola cresce sem comprometer o meio ambiente.</p>
-                    <div class="sobre-features">
-                        <div class="feature">
-                            <span>🚜</span>
-                            <h4>Produção Inteligente</h4>
-                        </div>
-                        <div class="feature">
-                            <span>🌱</span>
-                            <h4>Solo Regenerativo</h4>
-                        </div>
-                        <div class="feature">
-                            <span>💧</span>
-                            <h4>Água Eficiente</h4>
-                        </div>
+        <section id="projeto" class="content-section">
+            <div class="container">
+                <h3>Sobre o Projeto</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>O Problema</h4>
+                        <p>Descrição clara e objetiva sobre o desafio encontrado no campo.</p>
                     </div>
-                </div>
-                <div class="sobre-visual">
-                    <img src="img/balanca.png" alt="Balança produção x meio ambiente">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Soluções -->
-    <section id="solucoes" class="solucoes">
-        <div class="container">
-            <h2>Nossas Soluções</h2>
-            <div class="solucoes-grid">
-                <div class="card" data-tilt>
-                    <div class="card-icon">🌾</div>
-                    <h3>Plantio Direto</h3>
-                    <p>Reduz erosão e mantém umidade natural do solo</p>
-                </div>
-                <div class="card" data-tilt>
-                    <div class="card-icon">🔬</div>
-                    <h3>Bioinsumos</h3>
-                    <p>Substitui químicos por soluções biológicas</p>
-                </div>
-                <div class="card" data-tilt>
-                    <div class="card-icon">📱</div>
-                    <h3>Monitoramento IA</h3>
-                    <p>Sensores detectam necessidades em tempo real</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Impacto -->
-    <section id="impacto" class="impacto">
-        <div class="container">
-            <h2>Nosso Impacto</h2>
-            <div class="impacto-visual">
-                <canvas id="impactChart" width="400" height="400"></canvas>
-            </div>
-            <div class="impacto-text">
-                <p><strong>95% dos produtores</strong> relatam aumento na produtividade</p>
-                <input type="range" id="fontSize" min="16" max="24" value="16" class="font-slider">
-                <label for="fontSize">Tamanho da fonte: <span id="fontValue">16px</span></label>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 AgroForte. Produção forte, planeta vivo. Feito com ❤️ para o Agrinho.</p>
-        </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
+                    <div
