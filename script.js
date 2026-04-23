@@ -3,16 +3,16 @@ function saudacao() {
   let nome = document.getElementById("nome").value;
   let resposta = document.getElementById("resposta");
 
-  if (nome === "") {
+  if (nome.trim() === "") {
     resposta.innerText = "Por favor, digite seu nome.";
   } else {
-    resposta.innerText = `Olá, ${nome}! Bem-vindo ao Agro Forte 🌱`;
+    resposta.innerText = `Olá, ${nome}! Seja bem-vindo(a) 🌱`;
   }
 }
 
-// Mostrar e esconder galeria
+// Mostrar ou esconder galeria
 function toggleGaleria() {
-  let galeria = document.getElementById("galeria");
+  let galeria = document.getElementById("galeriaImagens");
 
   if (galeria.style.display === "none") {
     galeria.style.display = "flex";
@@ -21,9 +21,15 @@ function toggleGaleria() {
   }
 }
 
-// Alternar modo escuro
+// Modo escuro
 const themeToggle = document.getElementById("themeToggle");
 
-themeToggle.addEventListener("click", () => {
+themeToggle.addEventListener("click", function () {
   document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    themeToggle.innerText = "☀";
+  } else {
+    themeToggle.innerText = "🌙";
+  }
 });
