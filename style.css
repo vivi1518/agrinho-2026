@@ -2,12 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3s;
 }
 
 body {
+  font-family: Arial, sans-serif;
   background: #f4f9f4;
   color: #333;
-  font-family: Arial, sans-serif;
 }
 
 body.dark {
@@ -18,31 +19,52 @@ body.dark {
 nav {
   background: #2e8b57;
   padding: 15px;
+  position: fixed;
+  width: 100%;
   text-align: center;
-  position: sticky;
-  top: 0;
 }
 
-nav a, nav button {
+nav a {
   color: white;
-  margin: 0 10px;
+  margin: 10px;
   text-decoration: none;
-  background: none;
+}
+
+.dark-btn {
+  padding: 5px 10px;
+  border-radius: 15px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
 }
 
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-              url("img/campo.jpg") center/cover;
+  height: 100vh;
+  background: url('img/capa.jpg') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-box {
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
   color: white;
+  border-radius: 15px;
   text-align: center;
-  padding: 100px 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #3cb371;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
 }
 
 section {
-  padding: 40px 20px;
+  padding: 80px 20px;
   max-width: 1000px;
   margin: auto;
 }
@@ -58,44 +80,34 @@ section {
   min-width: 250px;
   background: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 body.dark .card {
-  background: #1f1f1f;
-}
-
-button {
-  margin-top: 10px;
-  padding: 10px;
-  border: none;
-  background: #3cb371;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #2e8b57;
-}
-
-input, textarea {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px;
-  margin: 10px 0;
+  background: #1e1e1e;
 }
 
 .galeria {
   display: flex;
   gap: 10px;
-  margin-top: 20px;
   flex-wrap: wrap;
 }
 
 .galeria img {
-  width: 30%;
-  border-radius: 8px;
+  width: 32%;
+  border-radius: 10px;
+}
+
+input, textarea, button {
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 400px;
+}
+
+button:hover {
+  background: #2e8b57;
+  color: white;
 }
 
 footer {
@@ -106,6 +118,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
   .galeria img {
     width: 100%;
   }
