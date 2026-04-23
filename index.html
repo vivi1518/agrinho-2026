@@ -1,55 +1,76 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Agrinho 2.0 - Sustentabilidade</title>
+  <title>Agrinho 2.0</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background: #f4f8f4;
+      background: #eef7ee;
     }
 
     header {
-      background: #2e7d32;
+      background: linear-gradient(90deg, #2e7d32, #66bb6a);
       color: white;
-      padding: 15px;
+      padding: 20px;
       text-align: center;
     }
 
     nav {
       background: #1b5e20;
-      padding: 10px;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     nav a {
       color: white;
-      margin: 10px;
+      padding: 12px 15px;
       text-decoration: none;
       font-weight: bold;
     }
 
+    nav a:hover {
+      background: #2e7d32;
+      border-radius: 5px;
+    }
+
     section {
-      padding: 20px;
+      padding: 25px;
     }
 
     .card {
       background: white;
-      padding: 15px;
-      margin: 15px 0;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    img {
+      width: 100%;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      margin-top: 10px;
     }
 
     button {
       background: #2e7d32;
       color: white;
       border: none;
-      padding: 10px;
-      border-radius: 5px;
+      padding: 10px 15px;
+      margin-top: 10px;
+      border-radius: 8px;
       cursor: pointer;
     }
 
@@ -65,7 +86,7 @@
       background: #2e7d32;
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
     }
   </style>
 </head>
@@ -74,7 +95,7 @@
 
 <header>
   <h1>🌱 Agrinho 2.0</h1>
-  <p>Sustentabilidade no Campo e na Cidade</p>
+  <p>Conectando o campo e a cidade com sustentabilidade</p>
 </header>
 
 <nav>
@@ -83,88 +104,76 @@
   <a href="#sustentabilidade">Sustentabilidade</a>
 </nav>
 
+<!-- AGRICULTURA -->
 <section id="agricultura">
   <h2>🌾 Agricultura Sustentável</h2>
 
   <div class="card">
     <p>
-      A agricultura sustentável busca produzir alimentos sem prejudicar o meio ambiente,
-      preservando recursos naturais e garantindo qualidade de vida.
+      A agricultura sustentável preserva o meio ambiente e garante produção de alimentos de qualidade.
     </p>
+
+    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854" alt="Agricultura sustentável">
+
+    <iframe src="https://www.youtube.com/embed/2e5nQ0n9h1M" allowfullscreen></iframe>
 
     <button onclick="toggle('links1')">🔗 Ver artigos</button>
 
     <div id="links1" class="hidden">
       <ul>
-        <li>
-          <a href="https://mdbf.com.br/artigo/agricultura-sustentavel-o-que-e/" target="_blank">
-            Agricultura Sustentável: o que é e benefícios
-          </a>
-        </li>
-
-        <li>
-          <a href="https://www.agrisustentavel.com/" target="_blank">
-            Portal de agricultura sustentável
-          </a>
-        </li>
+        <li><a href="https://mdbf.com.br/artigo/agricultura-sustentavel-o-que-e/" target="_blank">
+          Agricultura Sustentável: o que é
+        </a></li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- TECNOLOGIA -->
 <section id="tecnologia">
   <h2>🚜 Tecnologia no Campo</h2>
 
   <div class="card">
     <p>
-      A tecnologia no campo aumenta a produtividade e reduz impactos ambientais,
-      com uso de drones, sensores e agricultura digital.
+      A tecnologia melhora a produtividade e reduz impactos ambientais no campo.
     </p>
+
+    <img src="https://images.unsplash.com/photo-1598514982849-0a0f7e6cfa3c" alt="Tecnologia agrícola">
+
+    <iframe src="https://www.youtube.com/embed/1g6d4HkRk1M" allowfullscreen></iframe>
 
     <button onclick="toggle('links2')">🔗 Ver artigos</button>
 
     <div id="links2" class="hidden">
       <ul>
-        <li>
-          <a href="https://ijas-pdvagro.institutoidv.org/index.php/ijas/article/view/109" target="_blank">
-            Agricultura digital e sustentabilidade
-          </a>
-        </li>
-
-        <li>
-          <a href="https://agrozil.com.br/artigos/" target="_blank">
-            Artigos sobre tecnologia no agro
-          </a>
-        </li>
+        <li><a href="https://ijas-pdvagro.institutoidv.org/index.php/ijas/article/view/109" target="_blank">
+          Agricultura digital
+        </a></li>
       </ul>
     </div>
   </div>
 </section>
 
+<!-- SUSTENTABILIDADE -->
 <section id="sustentabilidade">
   <h2>🌍 Sustentabilidade</h2>
 
   <div class="card">
     <p>
-      A sustentabilidade busca equilibrar desenvolvimento econômico,
-      preservação ambiental e bem-estar social.
+      Sustentabilidade é cuidar do presente sem prejudicar o futuro.
     </p>
+
+    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Meio ambiente">
+
+    <iframe src="https://www.youtube.com/embed/3oGkM6i9f6E" allowfullscreen></iframe>
 
     <button onclick="toggle('links3')">🔗 Ver artigos</button>
 
     <div id="links3" class="hidden">
       <ul>
-        <li>
-          <a href="https://scielo.pt/scielo.php?pid=S0871-018X2023000300031&script=sci_arttext" target="_blank">
-            Sustentabilidade em organizações agrícolas
-          </a>
-        </li>
-
-        <li>
-          <a href="https://www.agrisustentavel.com/" target="_blank">
-            Conteúdos sobre meio ambiente
-          </a>
-        </li>
+        <li><a href="https://scielo.pt/scielo.php?pid=S0871-018X2023000300031&script=sci_arttext" target="_blank">
+          Sustentabilidade agrícola
+        </a></li>
       </ul>
     </div>
   </div>
