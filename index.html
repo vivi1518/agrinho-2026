@@ -1,71 +1,94 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Agrinho 2.0</title>
+  <title>Agrinho 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    :root {
+      --bg: #eef7ee;
+      --text: #222;
+      --card: #ffffff;
+      --primary: #2e7d32;
+    }
+
+    body.dark {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --card: #1e1e1e;
+      --primary: #66bb6a;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #eef7ee;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.4s;
     }
 
     header {
-      background: linear-gradient(90deg, #2e7d32, #66bb6a);
+      background: linear-gradient(90deg, var(--primary), #66bb6a);
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 25px;
     }
 
     nav {
-      background: #1b5e20;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      background: var(--primary);
+      text-align: center;
     }
 
     nav a {
       color: white;
-      padding: 12px 15px;
+      padding: 12px;
+      display: inline-block;
       text-decoration: none;
-      font-weight: bold;
     }
 
     nav a:hover {
-      background: #2e7d32;
+      background: rgba(255,255,255,0.2);
       border-radius: 5px;
     }
 
     section {
-      padding: 25px;
+      padding: 30px;
+    }
+
+    h2 {
+      border-left: 5px solid var(--primary);
+      padding-left: 10px;
     }
 
     .card {
-      background: white;
+      background: var(--card);
       padding: 20px;
       margin: 20px 0;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.6s;
     }
 
-    img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    iframe {
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    img, iframe {
       width: 100%;
-      height: 300px;
       border-radius: 10px;
       margin-top: 10px;
     }
 
     button {
-      background: #2e7d32;
+      background: var(--primary);
       color: white;
       border: none;
       padding: 10px 15px;
@@ -74,34 +97,35 @@
       cursor: pointer;
     }
 
-    button:hover {
-      background: #1b5e20;
-    }
-
-    .hidden {
-      display: none;
+    .toggle-dark {
+      position: fixed;
+      top: 10px;
+      right: 10px;
     }
 
     footer {
-      background: #2e7d32;
-      color: white;
       text-align: center;
       padding: 15px;
+      background: var(--primary);
+      color: white;
     }
   </style>
 </head>
 
 <body>
 
+<button class="toggle-dark" onclick="toggleDark()">🌙</button>
+
 <header>
-  <h1>🌱 Agrinho 2.0</h1>
-  <p>Conectando o campo e a cidade com sustentabilidade</p>
+  <h1>🌱 Agrinho 2026</h1>
+  <p>Educação, Sustentabilidade e Tecnologia no Campo</p>
 </header>
 
 <nav>
   <a href="#agricultura">Agricultura</a>
   <a href="#tecnologia">Tecnologia</a>
   <a href="#sustentabilidade">Sustentabilidade</a>
+  <a href="#impacto">Impacto</a>
 </nav>
 
 <!-- AGRICULTURA -->
@@ -110,22 +134,16 @@
 
   <div class="card">
     <p>
-      A agricultura sustentável preserva o meio ambiente e garante produção de alimentos de qualidade.
+      A agricultura sustentável busca equilibrar produção de alimentos e preservação ambiental.
+      Ela utiliza técnicas que evitam o desgaste do solo, economizam água e reduzem o uso de produtos químicos.
     </p>
 
-    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854" alt="Agricultura sustentável">
+    <p>
+      Esse modelo contribui para a segurança alimentar e melhora a qualidade de vida das comunidades rurais.
+    </p>
 
-    <iframe src="https://www.youtube.com/embed/2e5nQ0n9h1M" allowfullscreen></iframe>
-
-    <button onclick="toggle('links1')">🔗 Ver artigos</button>
-
-    <div id="links1" class="hidden">
-      <ul>
-        <li><a href="https://mdbf.com.br/artigo/agricultura-sustentavel-o-que-e/" target="_blank">
-          Agricultura Sustentável: o que é
-        </a></li>
-      </ul>
-    </div>
+    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854">
+    <iframe src="https://www.youtube.com/embed/8VQy9gZcZcU" allowfullscreen></iframe>
   </div>
 </section>
 
@@ -135,22 +153,15 @@
 
   <div class="card">
     <p>
-      A tecnologia melhora a produtividade e reduz impactos ambientais no campo.
+      A Agricultura 4.0 utiliza drones, sensores e inteligência artificial para aumentar a produtividade.
     </p>
 
-    <img src="https://images.unsplash.com/photo-1598514982849-0a0f7e6cfa3c" alt="Tecnologia agrícola">
+    <p>
+      Essas tecnologias ajudam a reduzir desperdícios, monitorar plantações e melhorar a eficiência.
+    </p>
 
-    <iframe src="https://www.youtube.com/embed/1g6d4HkRk1M" allowfullscreen></iframe>
-
-    <button onclick="toggle('links2')">🔗 Ver artigos</button>
-
-    <div id="links2" class="hidden">
-      <ul>
-        <li><a href="https://ijas-pdvagro.institutoidv.org/index.php/ijas/article/view/109" target="_blank">
-          Agricultura digital
-        </a></li>
-      </ul>
-    </div>
+    <img src="https://images.unsplash.com/photo-1598514982849-0a0f7e6cfa3c">
+    <iframe src="https://www.youtube.com/embed/7u8n9Zs0m9A" allowfullscreen></iframe>
   </div>
 </section>
 
@@ -160,23 +171,43 @@
 
   <div class="card">
     <p>
-      Sustentabilidade é cuidar do presente sem prejudicar o futuro.
+      Sustentabilidade é cuidar dos recursos naturais garantindo o futuro das próximas gerações.
     </p>
 
-    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Meio ambiente">
+    <p>
+      Atitudes como reciclagem e economia de água são fundamentais para o planeta.
+    </p>
 
-    <iframe src="https://www.youtube.com/embed/3oGkM6i9f6E" allowfullscreen></iframe>
-
-    <button onclick="toggle('links3')">🔗 Ver artigos</button>
-
-    <div id="links3" class="hidden">
-      <ul>
-        <li><a href="https://scielo.pt/scielo.php?pid=S0871-018X2023000300031&script=sci_arttext" target="_blank">
-          Sustentabilidade agrícola
-        </a></li>
-      </ul>
-    </div>
+    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
+    <iframe src="https://www.youtube.com/embed/kZIrIQDf1nQ" allowfullscreen></iframe>
   </div>
+</section>
+
+<!-- IMPACTO -->
+<section id="impacto">
+  <h2>🌎 O Impacto do Agrinho</h2>
+
+  <div class="card">
+    <p>
+      O Agrinho promove educação ambiental e cidadania, incentivando os estudantes a refletirem
+      sobre o papel do ser humano na preservação do meio ambiente.
+    </p>
+
+    <p>
+      Ele conecta campo e cidade, mostrando a importância da produção consciente e sustentável.
+    </p>
+
+    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
+    <iframe src="https://www.youtube.com/embed/o6UVP3M6XHk" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- INTERAÇÃO -->
+<section>
+  <h2>💡 Você ajuda o meio ambiente?</h2>
+
+  <button onclick="resposta()">Clique aqui</button>
+  <p id="resultado"></p>
 </section>
 
 <footer>
@@ -184,10 +215,31 @@
 </footer>
 
 <script>
-  function toggle(id) {
-    const elemento = document.getElementById(id);
-    elemento.classList.toggle("hidden");
+  function toggleDark() {
+    document.body.classList.toggle("dark");
   }
+
+  function resposta() {
+    document.getElementById("resultado").innerText =
+      "Cada pequena atitude faz diferença! Continue cuidando do planeta 🌱";
+  }
+
+  const cards = document.querySelectorAll('.card');
+
+  function showOnScroll() {
+    const trigger = window.innerHeight * 0.85;
+
+    cards.forEach(card => {
+      const top = card.getBoundingClientRect().top;
+
+      if (top < trigger) {
+        card.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', showOnScroll);
+  window.addEventListener('load', showOnScroll);
 </script>
 
 </body>
