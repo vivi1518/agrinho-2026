@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,60 +8,91 @@
 </head>
 <body>
 
-  <nav>
+  <!-- Menu -->
+  <nav id="menu">
     <a href="#inicio">Início</a>
     <a href="#agro">Agro</a>
     <a href="#sustentavel">Sustentável</a>
+    <a href="#galeria">Galeria</a>
     <a href="#contato">Contato</a>
-    <button id="themeToggle">🌙</button>
+    <button id="themeToggle" class="dark-btn">🌙</button>
   </nav>
 
-  <header id="inicio" class="hero">
-    <div>
+  <!-- Capa -->
+  <header class="hero" id="inicio">
+    <div class="hero-box">
       <h1>🌱 Agro Forte, Futuro Sustentável</h1>
-      <p>Produzir com responsabilidade é garantir o amanhã</p>
+      <p>Produção, tecnologia e respeito à natureza</p>
+      <a href="#agro" class="btn">Explorar</a>
     </div>
   </header>
 
+  <!-- Seção Agro -->
   <section id="agro">
     <h2>🚜 Agro Forte</h2>
     <div class="cards">
       <div class="card">
         <h3>Produção</h3>
-        <p>O agronegócio é essencial para abastecer a população e fortalecer a economia.</p>
+        <p>O agro fortalece a economia e garante alimentos para todos.</p>
       </div>
       <div class="card">
         <h3>Tecnologia</h3>
-        <p>A inovação torna o campo mais eficiente e sustentável.</p>
+        <p>Máquinas e inovação aumentam a produtividade no campo.</p>
       </div>
       <div class="card">
-        <h3>Empregos</h3>
-        <p>O setor gera oportunidades e desenvolvimento social.</p>
+        <h3>Desenvolvimento</h3>
+        <p>O setor gera empregos e movimenta comunidades rurais.</p>
       </div>
     </div>
   </section>
 
+  <!-- Sustentabilidade -->
   <section id="sustentavel">
     <h2>♻️ Futuro Sustentável</h2>
-    <p>O futuro depende do equilíbrio entre produção agrícola e preservação ambiental.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Preservação</h3>
+        <p>Cuidar da água, do solo e das florestas é essencial.</p>
+      </div>
+      <div class="card">
+        <h3>Consciência</h3>
+        <p>Pequenas atitudes fazem grande diferença no futuro.</p>
+      </div>
+      <div class="card">
+        <h3>Equilíbrio</h3>
+        <p>Produzir com responsabilidade é a base da sustentabilidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interação -->
+  <section id="interacao">
+    <h2>💬 Interação</h2>
 
     <label for="nome">Digite seu nome:</label>
     <input type="text" id="nome" placeholder="Seu nome">
+
     <button onclick="saudacao()">Enviar</button>
 
     <p id="resposta"></p>
+  </section>
 
-    <button onclick="toggleGaleria()">Mostrar/Esconder Galeria</button>
+  <!-- Galeria -->
+  <section id="galeria">
+    <h2>📸 Galeria</h2>
+    <button onclick="toggleGaleria()">Mostrar / Esconder</button>
 
-    <div class="galeria" id="galeria">
+    <div id="galeriaImagens" class="galeria">
       <img src="img/agro1.jpg" alt="Plantação">
-      <img src="img/agro2.jpg" alt="Agricultura sustentável">
-      <img src="img/agro3.jpg" alt="Campo sustentável">
+      <img src="img/agro2.jpg" alt="Campo">
+      <img src="img/agro3.jpg" alt="Sustentabilidade">
     </div>
   </section>
 
+  <!-- Contato -->
   <section id="contato">
     <h2>📩 Contato</h2>
+
     <form>
       <label for="email">Email:</label>
       <input type="email" id="email" required>
