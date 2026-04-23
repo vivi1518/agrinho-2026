@@ -1,43 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 - Sustentabilidade e Tecnologia</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Forte, Futuro Sustentável</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="container">
-            <h1 class="logo">Agrinho <span>2026</span></h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#projeto">O Projeto</a></li>
-                    <li><a href="#solucao">Solução</a></li>
-                    <li><a href="#contato" class="btn-cta">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#agro">Agro</a>
+    <a href="#sustentavel">Sustentável</a>
+    <a href="#contato">Contato</a>
+    <button id="themeToggle">🌙</button>
+  </nav>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="container">
-                <h2>Tecnologia no Campo para um Futuro Sustentável</h2>
-                <p>Explorando como a inovação pode transformar a agricultura e preservar o meio ambiente.</p>
-                <a href="#projeto" class="btn-primary">Saiba Mais</a>
-            </div>
-        </section>
+  <header id="inicio" class="hero">
+    <div>
+      <h1>🌱 Agro Forte, Futuro Sustentável</h1>
+      <p>Produzir com responsabilidade é garantir o amanhã</p>
+    </div>
+  </header>
 
-        <section id="projeto" class="content-section">
-            <div class="container">
-                <h3>Sobre o Projeto</h3>
-                <div class="grid">
-                    <div class="card">
-                        <h4>O Problema</h4>
-                        <p>Descrição clara e objetiva sobre o desafio encontrado no campo.</p>
-                    </div>
-                    <div
+  <section id="agro">
+    <h2>🚜 Agro Forte</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Produção</h3>
+        <p>O agronegócio é essencial para abastecer a população e fortalecer a economia.</p>
+      </div>
+      <div class="card">
+        <h3>Tecnologia</h3>
+        <p>A inovação torna o campo mais eficiente e sustentável.</p>
+      </div>
+      <div class="card">
+        <h3>Empregos</h3>
+        <p>O setor gera oportunidades e desenvolvimento social.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="sustentavel">
+    <h2>♻️ Futuro Sustentável</h2>
+    <p>O futuro depende do equilíbrio entre produção agrícola e preservação ambiental.</p>
+
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" id="nome" placeholder="Seu nome">
+    <button onclick="saudacao()">Enviar</button>
+
+    <p id="resposta"></p>
+
+    <button onclick="toggleGaleria()">Mostrar/Esconder Galeria</button>
+
+    <div class="galeria" id="galeria">
+      <img src="img/agro1.jpg" alt="Plantação">
+      <img src="img/agro2.jpg" alt="Agricultura sustentável">
+      <img src="img/agro3.jpg" alt="Campo sustentável">
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>📩 Contato</h2>
+    <form>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>🌱 Agro Forte, Futuro Sustentável | 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
