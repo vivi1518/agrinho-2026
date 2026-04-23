@@ -1,494 +1,343 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Agrinho 2026</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agro Forte, Futuro Sustentável</title>
 
-  <style>
-    :root {
-      --bg: #eef7ee;
-      --text: #222;
-      --card: #ffffff;
-      --primary: #2e7d32;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background 0.3s ease, color 0.3s ease;
+}
 
-    body.dark {
-      --bg: #121212;
-      --text: #e0e0e0;
-      --card: #1e1e1e;
-      --primary: #66bb6a;
-    }
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      transition: 0.4s;
-    }
+/* CORES */
+:root {
+  --bg: #f4f9f4;
+  --text: #333;
+  --card: #ffffff;
+  --nav: #2e8b57;
+}
 
-    header {
-      background: linear-gradient(90deg, var(--primary), #66bb6a);
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
+body.dark {
+  --bg: #121212;
+  --text: #e4e4e4;
+  --card: #1e1e1e;
+  --nav: #1a1a1a;
+}
 
-    nav {
-      background: var(--primary);
-      text-align: center;
-    }
+/* BASE */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
 
-    nav a {
-      color: white;
-      padding: 12px;
-      display: inline-block;
-      text-decoration: none;
-    }
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--nav);
+  padding: 15px;
+  text-align: center;
+  z-index: 1000;
+}
 
-    nav a:hover {
-      background: rgba(255,255,255,0.2);
-      border-radius: 5px;
-    }
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-    section {
-      padding: 30px;
-    }
+/* BOTÃO DARK */
+.dark-btn {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
 
-    h2 {
-      border-left: 5px solid var(--primary);
-      padding-left: 10px;
-    }
+.dark-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
 
-    .card {
-      background: var(--card);
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      opacity: 0;
-      transform: translateY(30px);
-      transition: 0.6s;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
 
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.hero div {
+  background: rgba(0,0,0,0.5);
+  padding: 30px;
+  border-radius: 15px;
+}
 
-    .card:hover {
-      transform: scale(1.02);
-    }
+.hero h1 {
+  font-size: 42px;
+}
 
-    img, iframe {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #3cb371;
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+}
 
-    button {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      margin-top: 10px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
+/* SEÇÕES */
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .toggle-dark {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-    }
+h2 {
+  color: #2e8b57;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: var(--primary);
-      color: white;
-    }
-  </style>
+/* CARDS */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 15px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* LINKS DOS CARDS */
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #2e8b57;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.card a:hover {
+  background: #246b45;
+}
+
+/* GALERIA */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.galeria img {
+  width: 32%;
+  border-radius: 10px;
+}
+
+/* VIDEO */
+iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--nav);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .galeria img {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<button class="toggle-dark" onclick="toggleDark()">🌙</button>
-
-<header>
-  <h1>🌱 Agrinho 2026</h1>
-  <p>Educação, Sustentabilidade e Tecnologia no Campo</p>
-</header>
-
 <nav>
-  <a href="#agricultura">Agricultura</a>
-  <a href="#tecnologia">Tecnologia</a>
-  <a href="#sustentabilidade">Sustentabilidade</a>
-  <a href="#impacto">Impacto</a>
+  <a href="#inicio">Início</a>
+  <a href="#agro">Agro</a>
+  <a href="#sustentavel">Sustentável</a>
+  <a href="#galeria">Galeria</a>
+  <a href="#video">Vídeo</a>
+  <a href="#referencias">Fontes</a>
+  <button id="themeToggle" class="dark-btn">🌙</button>
 </nav>
 
-<!-- AGRICULTURA -->
-<section id="agricultura">
-  <h2>🌾 Agricultura Sustentável</h2>
-
-  <div class="card">
-    <p>
-      A agricultura sustentável busca equilibrar produção de alimentos e preservação ambiental.
-      Ela utiliza técnicas que evitam o desgaste do solo, economizam água e reduzem o uso de produtos químicos.
-    </p>
-
-    <p>
-      Esse modelo contribui para a segurança alimentar e melhora a qualidade de vida das comunidades rurais.
-    </p>
-
-    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854">
-    <iframe src="https://youtu.be/kLMDIA3GKkg?si=6rktAAahS7cw2-al" allowfullscreen></iframe>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div>
+    <h1>🌱 Agro Forte, Futuro Sustentável</h1>
+    <p>Produção com consciência e respeito à natureza</p>
+    <a href="#agro" class="btn">Explorar</a>
   </div>
 </section>
 
-<!-- TECNOLOGIA -->
-<section id="tecnologia">
-  <h2>🚜 Tecnologia no Campo</h2>
-
-  <div class="card">
-    <p>
-      A Agricultura 4.0 utiliza drones, sensores e inteligência artificial para aumentar a produtividade.
-    </p>
-
-    <p>
-      Essas tecnologias ajudam a reduzir desperdícios, monitorar plantações e melhorar a eficiência.
-    </p>
-
-    <img src="https://images.unsplash.com/photo-1598514982849-0a0f7e6cfa3c">
-    <iframe src="https://www.youtube.com/embed/7u8n9Zs0m9A" allowfullscreen></iframe>
+<!-- AGRO -->
+<section id="agro">
+  <h2>🚜 Agro Forte</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Produção</h3>
+      <p>O agro sustenta a economia e garante alimentos para a população.</p>
+    </div>
+    <div class="card">
+      <h3>Tecnologia</h3>
+      <p>Inovação no campo aumenta a produtividade com eficiência.</p>
+    </div>
+    <div class="card">
+      <h3>Desenvolvimento</h3>
+      <p>Gera empregos e fortalece comunidades rurais.</p>
+    </div>
   </div>
 </section>
 
 <!-- SUSTENTABILIDADE -->
-<section id="sustentabilidade">
-  <h2>🌍 Sustentabilidade</h2>
-
-  <div class="card">
-    <p>
-      Sustentabilidade é cuidar dos recursos naturais garantindo o futuro das próximas gerações.
-    </p>
-
-    <p>
-      Atitudes como reciclagem e economia de água são fundamentais para o planeta.
-    </p>
-
-    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
-    <iframe src="https://www.youtube.com/embed/kZIrIQDf1nQ" allowfullscreen></iframe>
+<section id="sustentavel">
+  <h2>♻️ Futuro Sustentável</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Preservação</h3>
+      <p>Proteger os recursos naturais é essencial para o futuro.</p>
+    </div>
+    <div class="card">
+      <h3>Consciência</h3>
+      <p>Pequenas atitudes ajudam a cuidar do planeta.</p>
+    </div>
+    <div class="card">
+      <h3>Equilíbrio</h3>
+      <p>Produzir com responsabilidade é o caminho sustentável.</p>
+    </div>
   </div>
 </section>
 
-<!-- IMPACTO -->
-<section id="impacto">
-  <h2>🌎 O Impacto do Agrinho</h2>
-
-  <div class="card">
-    <p>
-      O Agrinho promove educação ambiental e cidadania, incentivando os estudantes a refletirem
-      sobre o papel do ser humano na preservação do meio ambiente.
-    </p>
-
-    <p>
-      Ele conecta campo e cidade, mostrando a importância da produção consciente e sustentável.
-    </p>
-
-    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
-    <iframe src="https://www.youtube.com/embed/o6UVP3M6XHk" allowfullscreen></iframe>
+<!-- GALERIA -->
+<section id="galeria">
+  <h2>📸 Galeria</h2>
+  <div class="galeria">
+    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef">
+    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
   </div>
 </section>
 
-<!-- INTERAÇÃO -->
-<section>
-  <h2>💡 Você ajuda o meio ambiente?</h2>
-
-  <button onclick="resposta()">Clique aqui</button>
-  <p id="resultado"></p>
+<!-- VIDEO -->
+<section id="video">
+  <h2>🎥 Sustentabilidade na prática</h2>
+  <iframe height="315"
+    src="https://www.youtube.com/embed/PJ50lwwy_hs"
+    allowfullscreen>
+  </iframe>
 </section>
 
-<footer>
-  <p>Projeto Agrinho 2026 🌱</p>
-</footer>
+<!-- REFERÊNCIAS -->
+<section id="referencias">
+  <h2>📚 Fontes Confiáveis</h2>
 
-<script>
-  function toggleDark() {
-    document.body.classList.toggle("dark");
-  }
+  <p>As informações apresentadas neste site foram baseadas em instituições reconhecidas e fontes oficiais:</p>
 
-  function resposta() {
-    document.getElementById("resultado").innerText =
-      "Cada pequena atitude faz diferença! Continue cuidando do planeta 🌱";
-  }
+  <div class="cards">
 
-  const cards = document.querySelectorAll('.card');
+    <div class="card">
+      <h3>Ministério da Agricultura</h3>
+      <p>Dados oficiais sobre o agronegócio brasileiro.</p>
+      <a href="https://www.gov.br/agricultura" target="_blank">Acessar</a>
+    </div>
 
-  function showOnScroll() {
-    const trigger = window.innerHeight * 0.85;
+    <div class="card">
+      <h3>EMBRAPA</h3>
+      <p>Pesquisa científica e inovação no campo.</p>
+      <a href="https://www.embrapa.br" target="_blank">Acessar</a>
+    </div>
 
-    cards.forEach(card => {
-      const top = card.getBoundingClientRect().top;
+    <div class="card">
+      <h3>IBAMA</h3>
+      <p>Proteção ambiental e fiscalização.</p>
+      <a href="https://www.gov.br/ibama" target="_blank">Acessar</a>
+    </div>
 
-      if (top < trigger) {
-        card.classList.add('show');
-      }
-    });
-  }
+    <div class="card">
+      <h3>Agro Sustentar</h3>
+      <p>Conteúdos sobre sustentabilidade no agro.</p>
+      <a href="https://agrosustentar.com.br" target="_blank">Acessar</a>
+    </div>
 
-  window.addEventListener('scroll', showOnScroll);
-  window.addEventListener('load', showOnScroll);
-</script>
+    <div class="card">
+      <h3>Agro Contexto</h3>
+      <p>Análises e informações do setor agrícola.</p>
+      <a href="https://agrocontexto.com.br" target="_blank">Acessar</a>
+    </div>
 
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Agrinho 2026</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    :root {
-      --bg: #eef7ee;
-      --text: #222;
-      --card: #ffffff;
-      --primary: #2e7d32;
-    }
-
-    body.dark {
-      --bg: #121212;
-      --text: #e0e0e0;
-      --card: #1e1e1e;
-      --primary: #66bb6a;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: var(--bg);
-      color: var(--text);
-      transition: 0.4s;
-    }
-
-    /* TELA INICIAL */
-    #intro {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(120deg, #2e7d32, #66bb6a);
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      text-align: center;
-      animation: fadeIn 1s ease;
-    }
-
-    #intro h1 {
-      font-size: 40px;
-      animation: slideDown 1s ease;
-    }
-
-    #intro p {
-      animation: fadeIn 2s ease;
-    }
-
-    #intro button {
-      margin-top: 20px;
-      padding: 12px 20px;
-      border: none;
-      background: white;
-      color: #2e7d32;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    #intro button:hover {
-      transform: scale(1.1);
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    @keyframes slideDown {
-      from {transform: translateY(-50px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    header {
-      background: linear-gradient(90deg, var(--primary), #66bb6a);
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
-
-    nav {
-      background: var(--primary);
-      text-align: center;
-    }
-
-    nav a {
-      color: white;
-      padding: 12px;
-      display: inline-block;
-      text-decoration: none;
-    }
-
-    section {
-      padding: 30px;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      opacity: 0;
-      transform: translateY(30px);
-      transition: 0.6s;
-    }
-
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    img, iframe {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-    }
-
-    button {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .toggle-dark {
-      position: fixed;
-      top: 10px;
-      right: 10px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: var(--primary);
-      color: white;
-    }
-  </style>
-</head>
-
-<body>
-
-<!-- TELA INICIAL -->
-<div id="intro">
-  <h1>🌱 Agrinho 2026</h1>
-  <p>Conectando o campo e a cidade com sustentabilidade</p>
-  <button onclick="entrar()">Entrar no site</button>
-</div>
-
-<button class="toggle-dark" onclick="toggleDark()">🌙</button>
-
-<header>
-  <h1>🌱 Agrinho 2026</h1>
-</header>
-
-<nav>
-  <a href="#agricultura">Agricultura</a>
-  <a href="#tecnologia">Tecnologia</a>
-  <a href="#sustentabilidade">Sustentabilidade</a>
-  <a href="#impacto">Impacto</a>
-</nav>
-
-<section id="agricultura">
-  <h2>🌾 Agricultura Sustentável</h2>
-  <div class="card">
-    <p>A agricultura sustentável protege o meio ambiente e garante o futuro.</p>
-    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854">
-    <iframe src="https://www.youtube.com/embed/8VQy9gZcZcU"></iframe>
-  </div>
-</section>
-
-<section id="tecnologia">
-  <h2>🚜 Tecnologia no Campo</h2>
-  <div class="card">
-    <p>Uso de tecnologia para melhorar a produção agrícola.</p>
-    <img src="https://images.unsplash.com/photo-1598514982849-0a0f7e6cfa3c">
-    <iframe src="https://www.youtube.com/embed/7u8n9Zs0m9A"></iframe>
-  </div>
-</section>
-
-<section id="sustentabilidade">
-  <h2>🌍 Sustentabilidade</h2>
-  <div class="card">
-    <p>Cuidar do planeta é essencial para o futuro.</p>
-    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e">
-    <iframe src="https://www.youtube.com/embed/kZIrIQDf1nQ"></iframe>
-  </div>
-</section>
-
-<section id="impacto">
-  <h2>🌎 Impacto do Agrinho</h2>
-  <div class="card">
-    <p>Educação ambiental e cidadania.</p>
-    <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
-    <iframe src="https://www.youtube.com/embed/o6UVP3M6XHk"></iframe>
   </div>
 </section>
 
 <footer>
-  <p>Projeto Agrinho 🌱</p>
+  <p>🌱 Agro Forte, Futuro Sustentável | 2026</p>
 </footer>
 
+<!-- SCRIPT DARK MODE -->
 <script>
-  function entrar() {
-    document.getElementById("intro").classList.add("hidden");
+const btn = document.getElementById("themeToggle");
+
+function loadTheme() {
+  const saved = localStorage.getItem("theme");
+
+  if (saved) {
+    document.body.classList.toggle("dark", saved === "dark");
+  } else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.body.classList.toggle("dark", prefersDark);
   }
 
-  setTimeout(() => {
-    document.getElementById("intro").classList.add("hidden");
-  }, 4000);
+  updateIcon();
+}
 
-  function toggleDark() {
-    document.body.classList.toggle("dark");
-  }
+btn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
 
-  const cards = document.querySelectorAll('.card');
+  const isDark = document.body.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 
-  function showOnScroll() {
-    const trigger = window.innerHeight * 0.85;
+  updateIcon();
+});
 
-    cards.forEach(card => {
-      const top = card.getBoundingClientRect().top;
+function updateIcon() {
+  btn.textContent = document.body.classList.contains("dark") ? "☀" : "🌙";
+}
 
-      if (top < trigger) {
-        card.classList.add('show');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', showOnScroll);
-  window.addEventListener('load', showOnScroll);
+loadTheme();
 </script>
 
 </body>
