@@ -33,3 +33,31 @@ themeToggle.addEventListener("click", function () {
     themeToggle.innerText = "🌙";
   }
 });
+/* LOADER */
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+  }, 1500);
+});
+
+/* BOTÃO TOPO */
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+  if(window.scrollY > 300){
+    topBtn.style.display = "block";
+  }else{
+    topBtn.style.display = "none";
+  }
+
+});
+
+topBtn.addEventListener("click", () => {
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+});
