@@ -171,62 +171,6 @@ footer {
   padding: 20px;
 }
 
-/* ===== RESPONSIVIDADE ===== */
-
-/* Celulares pequenos */
-@media (max-width:480px){
-
-    .container{
-        width:95%;
-        gap:15px;
-    }
-
-    .card{
-        padding:18px;
-    }
-}
-
-/* Tablets */
-@media (min-width:768px){
-
-    .container{
-        grid-template-columns:
-        repeat(auto-fit,minmax(320px,1fr));
-    }
-}
-
-/* Notebooks */
-@media (min-width:1200px){
-
-    .container{
-        gap:30px;
-    }
-}
-
-/* Monitores grandes */
-@media (min-width:1920px){
-
-    html{
-        font-size:18px;
-    }
-
-    .container{
-        width:min(90%,1600px);
-    }
-}
-
-/* Telas UltraWide 2560px+ */
-@media (min-width:2560px){
-
-    html{
-        font-size:20px;
-    }
-
-    .container{
-        max-width:2000px;
-    }
-}
-
 <nav>
   <a href="#inicio">Início</a>
   <a href="#agro">Agro</a>
