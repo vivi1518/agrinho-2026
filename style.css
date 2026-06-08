@@ -154,66 +154,106 @@ footer {
   }
 }
 
-/* ==========================
-   RESPONSIVIDADE AVANÇADA
-   320px → 2560px+
-========================== */
-
-/* Configuração global */
-html{
-    font-size:16px;
-    scroll-behavior:smooth;
-}
-
-body{
-    min-width:320px;
-    overflow-x:hidden;
-}
-
-/* CSS para tela cheia */
+/* Tela cheia e responsiva */
 html, body {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden; /* evita barras de rolagem */
+    font-size: 16px;
+    font-family: Arial, sans-serif;
 }
 
-#container {  /* Substitua #container pelo id do elemento principal do seu site */
-    width: 100%;
-    height: 100%;
-    display: flex;       /* ou grid, dependendo do layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container principal ocupa toda a tela */
+#container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header, Main e Footer responsivos */
+header, footer {
+    background-color: #2c7a4b;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-/* Containers fluidos */
-section{
-    width:min(95%, 1400px);
-    margin-inline:auto;
-    padding-block:clamp(3rem, 6vw, 6rem);
-    padding-inline:clamp(1rem, 3vw, 2rem);
+    padding: 20px;
+    text-align: center;
 }
 
-/* Hero responsivo */
-.hero{
-    min-height:100vh;
-    min-height:100svh;
-    padding:clamp(1rem, 3vw, 3rem);
+/* Caixa de acessibilidade flutuante */
+#acessibilidade {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
 }
 
-.hero div{
-    width:min(95%, 850px);
+#acessibilidade button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #2c7a4b;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: background 0.3s;
 }
 
-.hero h1{
-    font-size:clamp(2rem, 6vw, 4.5rem);
-    line-height:1.1;
+#acessibilidade button:hover {
+    background: #1f5a36;
 }
 
-.hero p{
-    font-size:clamp(1rem, 2vw, 1.5rem);
+/* Modo escuro */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
 }
 
+.dark-mode header,
+.dark-mode footer,
+.dark-mode main {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 600px) {
+    #acessibilidade {
+        right: 5px;
+        gap: 5px;
+    }
+
+    #acessibilidade button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
 /* Navegação flexível */
 nav{
     display:flex;
