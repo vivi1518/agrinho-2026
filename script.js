@@ -39,7 +39,10 @@ function alternarTema() {
 // Leitura por voz
 function lerPagina() {
     pararLeitura();
-    const texto = document.body.innerText;
+   const texto =
+document.querySelector("main")?.innerText ||
+document.querySelector("#agro")?.innerText ||
+"";
     const fala = new SpeechSynthesisUtterance(texto);
     fala.lang = "pt-BR";
     fala.rate = 1;
@@ -54,7 +57,9 @@ function pararLeitura() {
 
 // Ajuste dinâmico para tela cheia
 window.addEventListener("resize", () => {
-    document.getElementById("container").style.height = window.innerHeight + "px";
+    window.addEventListener("resize", () => {
+    document.getElementById("container").style.height =
+    window.innerHeight + "px";
 });
 
 // Inicializa altura completa
