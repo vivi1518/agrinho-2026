@@ -170,6 +170,22 @@ body{
     overflow-x:hidden;
 }
 
+/* CSS para tela cheia */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* evita barras de rolagem */
+}
+
+#container {  /* Substitua #container pelo id do elemento principal do seu site */
+    width: 100%;
+    height: 100%;
+    display: flex;       /* ou grid, dependendo do layout */
+    justify-content: center;
+    align-items: center;
+}
 /* Containers fluidos */
 section{
     width:min(95%, 1400px);
