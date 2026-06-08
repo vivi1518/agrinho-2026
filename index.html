@@ -68,6 +68,39 @@ nav a {
   margin-left: 10px;
 }
 
+  <script>
+let tamanhoFonte = 16;
+
+// Aumentar e diminuir fonte
+function alterarFonte(valor) {
+    tamanhoFonte += valor;
+    document.body.style.fontSize = tamanhoFonte + "px";
+}
+
+// Modo escuro/claro
+function alternarTema() {
+    document.body.classList.toggle("dark-mode");
+}
+
+// Leitura por voz
+function lerPagina() {
+    pararLeitura();
+
+    const texto = document.body.innerText;
+    const fala = new SpeechSynthesisUtterance(texto);
+
+    fala.lang = "pt-BR";
+    fala.rate = 1;
+    fala.pitch = 1;
+
+    speechSynthesis.speak(fala);
+}
+
+// Parar leitura
+function pararLeitura() {
+    speechSynthesis.cancel();
+}
+</script>
 .dark-btn:hover {
   background: rgba(255,255,255,0.2);
 }
@@ -193,8 +226,13 @@ footer {
   <a href="#galeria">Galeria</a>
   <a href="#video">Vídeo</a>
   <a href="#referencias">Fontes</a>
-  <button id="themeToggle" class="dark-btn">🌙</button>
-</nav>
+  <div id="acessibilidade">
+    <button onclick="alterarFonte(1)">A+</button>
+    <button onclick="alterarFonte(-1)">A-</button>
+    <button onclick="alternarTema()">🌙</button>
+    <button onclick="lerPagina()">🔊 Ler</button>
+    <button onclick="pararLeitura()">⏹ Parar</button>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="inicio">
