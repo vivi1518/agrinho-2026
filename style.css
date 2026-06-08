@@ -270,13 +270,44 @@ img{
 }
 
 /* Botões */
-.btn{
-    padding:
-    clamp(0.8rem,1vw,1rem)
-    clamp(1.2rem,2vw,2rem);
+#acessibilidade {
+    position: fixed;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 9999;
+}
 
-    font-size:
-    clamp(0.9rem,1vw,1.1rem);
+#acessibilidade button {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: #2c7a4b;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+#acessibilidade button:hover {
+    background: #1f5a36;
+}
+
+/* Modo escuro */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header,
+.dark-mode footer,
+.dark-mode section {
+    background-color: #1e1e1e;
+    color: #ffffff;
 }
 
 /* CELULARES */
