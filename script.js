@@ -33,7 +33,7 @@ function alterarFonte(valor) {
 
 // Modo escuro/claro
 function alternarTema() {
-    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("dark");
 }
 
 // Leitura por voz
