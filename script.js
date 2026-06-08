@@ -74,9 +74,16 @@ themeToggle.addEventListener("click", function () {
 });
 /* LOADER */
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.getElementById("loader").style.display = "none";
-  }, 1500);
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+
+  if(loader){
+      loader.style.opacity = "0";
+
+      setTimeout(() => {
+          loader.remove();
+      }, 300);
+  }
 });
 
 /* BOTÃO TOPO */
